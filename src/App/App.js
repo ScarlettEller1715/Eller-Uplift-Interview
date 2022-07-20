@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TrainCard from "../TrainCard/TrainCard";
+import './App.css'
 
 
 function App() {
@@ -22,8 +23,14 @@ useEffect(() => {
 
   const renderedTrains = trains.map((train) => {
     return ( 
-      <TrainCard trainId={train.TrainId} />
+      <div className={train.LineCode ? train.LineCode : "none"}>
+        <TrainCard trainId={train.TrainId}
+                  serviceType={train.ServiceType}
+                  carCount={train.CarCount}
+                />
+      </div>
       )
+      
   })
 
 
