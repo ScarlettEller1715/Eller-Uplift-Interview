@@ -1,7 +1,22 @@
 import logo from './logo.svg';
+import { useEffect } from "react";
 import './App.css';
 
 function App() {
+
+useEffect(() => {
+  fetch("https://api.wmata.com/TrainPositions/TrainPositions?contentType=json", {
+    method: 'GET',
+    headers: {
+      Host: 'api.wmata.com',
+      api_key: 'e13626d03d8e4c03ac07f95541b3091b'
+    }
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+})
+
+
   return (
     <div className="App">
       <header className="App-header">
