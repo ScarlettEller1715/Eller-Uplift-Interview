@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.none {
+  outline: solid black;
+}
+
+.RD {
+  outline: solid red;
+}
+
+.BL {
+  outline: solid blue;
+}
+
+.GR {
+  outline: solid green;
+}
+
+.OR {
+  outline: solid orange;
+}
+
+.SV {
+  outline: solid silver;
+}
+
+.YL {
+  outline: solid yellow;
+}
