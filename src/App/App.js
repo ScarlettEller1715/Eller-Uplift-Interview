@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import TrainCard from "../TrainCard/TrainCard";
 import './App.css'
 
-
 function App() {
 
+//This state holds the unfiltered train data
 const [trains, setTrains] = useState([])
 
+//These states hold the active filters for the data
 const [colorFilter, setColorFilter] = useState("")
 const [serviceTypeFilter, setServiceTypeFilter] = useState("")
 const [carCountFilter, setCarCountFilter] = useState("")
 
+//Fetch for data
 useEffect(() => {
   fetch("https://api.wmata.com/TrainPositions/TrainPositions?contentType=json", {
     method: 'GET',
@@ -23,6 +25,7 @@ useEffect(() => {
     .then((data) => setTrains(data.TrainPositions))
 }, [])
 
+//The data filters:
   const filteredTrains = trains.filter((train) => 
     train.LineCode === colorFilter || colorFilter === ""
   ).filter((train) => 
@@ -30,6 +33,8 @@ useEffect(() => {
   ).filter((train) => 
     train.CarCount == carCountFilter || carCountFilter === "")
 
+
+//This variable iterates through the filtered data and renders them
   const renderedTrains = filteredTrains.map((train) => {
     return ( 
       <div className={train.LineCode ? train.LineCode : "none"}>
@@ -41,6 +46,7 @@ useEffect(() => {
       ) 
   })
 
+//The main application
   return (
     <div className="App">
       <h1>WMATA Trains</h1>
