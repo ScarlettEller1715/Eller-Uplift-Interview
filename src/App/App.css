@@ -2,30 +2,78 @@
   text-align: center;
 }
 
+.trainCollection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 2vw;
+}
+
 .none {
-  outline: solid black;
+  color: white;
+  background-color: black;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .RD {
-  outline: solid red;
+  color: white;
+  background-color: red;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .BL {
-  outline: solid blue;
+  color: white;
+  background-color: blue;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .GR {
-  outline: solid green;
+  color: white;
+  background-color: green;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .OR {
-  outline: solid orange;
+  color: white;
+  background-color: orange;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .SV {
-  outline: solid silver;
+  color: white;
+  background-color: silver;
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
 }
 
 .YL {
-  outline: solid yellow;
+  color: white;
+  background-color: rgb(220, 220, 1);
+
+  width: 20vw;
+  height: 10vw;
+  margin: .5vw;
+}
+
+p {
+  font-weight: bold;
 }
