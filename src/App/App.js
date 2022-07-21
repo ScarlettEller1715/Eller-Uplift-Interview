@@ -16,7 +16,7 @@ useEffect(() => {
     method: 'GET',
     headers: {
       Host: 'api.wmata.com',
-      api_key: 'e13626d03d8e4c03ac07f95541b3091b'
+      api_key: '395ef1f013fd4ffabd567a96ebe6b7fa'
     }
   })
     .then((res) => res.json())
@@ -40,9 +40,6 @@ useEffect(() => {
       </div>
       ) 
   })
-
-  console.log(carCountFilter)
-
 
   return (
     <div className="App">
