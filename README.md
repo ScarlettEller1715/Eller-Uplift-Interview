@@ -7,7 +7,7 @@ Scarlett Eller
 
 ## How to Run This Application:
 ```
-npm start --prefix client 
+npm start 
 ```
 
 
